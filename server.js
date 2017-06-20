@@ -15,7 +15,9 @@ app.get('/:times', function(req, res) {
     var date = new Date();
     var prettyDate = date.toDateString();
     var unixTimeSeconds = Math.floor(Date.now() / 1000);
-    var regexrNatural = /^[JFMASOND]\w+\%20\d+,\%20\d{4}$/;
+    var regexrNatural = /^[JFMASOND]\w+\%20\d+,\%20\d{4}$/g;
+
+    // improvement ideas: update to case, switch statements
 
     if (req.params.times <= unixTimeSeconds) {
         res.send({
@@ -28,6 +30,9 @@ app.get('/:times', function(req, res) {
             'unix' : unixTimeSeconds,
             'natural' : req.params.times
         });
+    }
+    else if (req.params.times === "") {
+        res.send()
     }
     else {  return null;  }
     // first make a server that will respond to any request with unix time and natural date
