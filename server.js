@@ -31,10 +31,12 @@ app.get('/:times', function(req, res) {
             'natural' : req.params.times
         });
     }
-    else if (req.params.times === "") {
-        res.send()
+    else {  
+        res.send({
+            'unix': null,
+            'natural': null
+        });
     }
-    else {  return null;  }
     // first make a server that will respond to any request with unix time and natural date
     // first need to extract after the / = accessible via req.path
     // if the req.path is a natural date, return both natural date and unix seconds (1497283013)
