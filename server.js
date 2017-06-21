@@ -11,11 +11,12 @@ const port = process.env.PORT || 8080;
 // and also for natural dates, 
 
 app.get('/:times', function(req, res) {
-    console.log(req.params.times);
     var date = new Date();
     var prettyDate = date.toDateString();
     var unixTimeSeconds = Math.floor(Date.now() / 1000);
     var regexrNatural = /^[JFMASOND]\w+\s\d+,\s\d{4}$/g;
+
+    console.log(prettyDate);
 
     // improvement ideas: update to case, switch statements
 
@@ -37,14 +38,7 @@ app.get('/:times', function(req, res) {
             'natural': null
         });
     }
-    // first make a server that will respond to any request with unix time and natural date
-    // first need to extract after the / = accessible via req.path
-    // if the req.path is a natural date, return both natural date and unix seconds (1497283013)
-    // var path = req.route.path;
-    
-    // if (isTimestamp(req.path)) {
-    //     console.log(req.path, new Date()); //also the string date)
-    // }
+
 });
 
 app.listen(port);
@@ -53,3 +47,11 @@ app.listen(port);
 
 // https://github.com/Slitzweitz/timestamper.git
 
+    // first make a server that will respond to any request with unix time and natural date
+    // first need to extract after the / = accessible via req.path
+    // if the req.path is a natural date, return both natural date and unix seconds (1497283013)
+    // var path = req.route.path;
+    
+    // if (isTimestamp(req.path)) {
+    //     console.log(req.path, new Date()); //also the string date)
+    // }
