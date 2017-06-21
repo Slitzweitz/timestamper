@@ -15,7 +15,7 @@ app.get('/:times', function(req, res) {
     var date = new Date();
     var prettyDate = date.toDateString();
     var unixTimeSeconds = Math.floor(Date.now() / 1000);
-    var regexrNatural = /^[JFMASOND]\w+\%20\d+,\%20\d{4}$/g;
+    var regexrNatural = /^[JFMASOND]\w+\s\d+,\s\d{4}$/g;
 
     // improvement ideas: update to case, switch statements
 
