@@ -9,7 +9,6 @@ const port = process.env.PORT || 8080;
 
 app.get('/app/whoami', function(req, res) {
     var language = req.headers['accept-language'].split(',');
-
     var osStart = req.headers['user-agent'].indexOf('(') + 1;
     var osEnd = req.headers['user-agent'].indexOf(')');
     var os = req.headers['user-agent'].slice(osStart,osEnd);

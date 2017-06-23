@@ -1,19 +1,29 @@
 {
-  "name": "timestamp",
+  "name": "headerparser",
   "version": "1.0.0",
-  "description": "free code camp api timestamp project",
-  "main": "index.js",
+  "description": "parses ip address, language, and OS",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Slitzweitz/timestamper.git"
   },
   "keywords": [
     "node",
-    "js",
-    "express"
+    "express",
+    "js"
   ],
   "author": "Colin Barlow",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.3"
-  }
+  "bugs": {
+    "url": "https://github.com/Slitzweitz/timestamper/issues"
+  },
+  "homepage": "https://github.com/Slitzweitz/timestamper#readme"
 }
