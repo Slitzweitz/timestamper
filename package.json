@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Slitzweitz/timestamper.git"
+    "url": "git+https://github.com/Slitzweitz/headerparser.git"
   },
   "keywords": [
     "node",
@@ -23,7 +23,7 @@
   "author": "Colin Barlow",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Slitzweitz/timestamper/issues"
+    "url": "https://github.com/Slitzweitz/headerparser/issues"
   },
-  "homepage": "https://github.com/Slitzweitz/timestamper#readme"
+  "homepage": "https://github.com/Slitzweitz/headerparser#readme"
 }
